@@ -1,0 +1,575 @@
+
+
+Microchip Technology PIC LITE Macro Assembler V1.33 build 59893 
+                                                                                               Sat Nov 29 11:07:23 2014
+
+Microchip Technology Omniscient Code Generator (Lite mode) build 59893
+     1                           	processor	12F683
+     2                           	opt	pw 120
+     3                           	opt	lm
+     4                           	psect	idataBANK0,global,class=CODE,delta=2
+     5                           	psect	cinit,global,class=CODE,merge=1,delta=2
+     6                           	psect	dataBANK0,global,class=BANK0,space=1,delta=1
+     7                           	psect	cstackCOMMON,global,class=COMMON,space=1,delta=1
+     8                           	psect	maintext,global,class=CODE,split=1,delta=2
+     9                           	psect	text1,local,class=CODE,merge=1,delta=2
+    10                           	dabs	1,0x7E,2
+    11  0000                     	;# 
+    12  0001                     	;# 
+    13  0002                     	;# 
+    14  0003                     	;# 
+    15  0004                     	;# 
+    16  0005                     	;# 
+    17  000A                     	;# 
+    18  000B                     	;# 
+    19  000C                     	;# 
+    20  000E                     	;# 
+    21  000E                     	;# 
+    22  000F                     	;# 
+    23  0010                     	;# 
+    24  0011                     	;# 
+    25  0012                     	;# 
+    26  0013                     	;# 
+    27  0013                     	;# 
+    28  0014                     	;# 
+    29  0015                     	;# 
+    30  0018                     	;# 
+    31  0019                     	;# 
+    32  001A                     	;# 
+    33  001E                     	;# 
+    34  001F                     	;# 
+    35  0081                     	;# 
+    36  0085                     	;# 
+    37  008C                     	;# 
+    38  008E                     	;# 
+    39  008F                     	;# 
+    40  0090                     	;# 
+    41  0092                     	;# 
+    42  0095                     	;# 
+    43  0095                     	;# 
+    44  0096                     	;# 
+    45  0096                     	;# 
+    46  0099                     	;# 
+    47  009A                     	;# 
+    48  009A                     	;# 
+    49  009B                     	;# 
+    50  009C                     	;# 
+    51  009D                     	;# 
+    52  009E                     	;# 
+    53  009F                     	;# 
+    54                           
+    55                           	psect	idataBANK0
+    56  0757                     __pidataBANK0:	
+    57                           
+    58                           ;initializer for _statetri
+    59  0757  3404               	retlw	4
+    60  0758  3410               	retlw	16
+    61  0759  3404               	retlw	4
+    62  075A  3400               	retlw	0
+    63  075B  3404               	retlw	4
+    64  075C  3402               	retlw	2
+    65  075D  3404               	retlw	4
+    66  075E  3400               	retlw	0
+    67                           
+    68                           ;initializer for _stateval
+    69  075F  3412               	retlw	18
+    70  0760  3422               	retlw	34
+    71  0761  3422               	retlw	34
+    72  0762  3426               	retlw	38
+    73  0763  3421               	retlw	33
+    74  0764  3424               	retlw	36
+    75  0765  3422               	retlw	34
+    76  0766  3422               	retlw	34
+    77  0005                     _GPIO	set	5
+    78  008F                     _OSCCONbits	set	143
+    79  0085                     _TRISIO	set	133
+    80  0095                     _WPU	set	149
+    81                           
+    82                           ; #config settings
+    83  0000                     
+    84                           	psect	cinit
+    85  07DE                     start_initialization:	
+    86  07DE                     __initialization:	
+    87                           
+    88                           ; Initialize objects allocated to BANK0
+    89  07DE  2757               	fcall	__pidataBANK0	;fetch initializer
+    90  07DF  00A0               	movwf	__pdataBANK0& (0+127)
+    91  07E0  2758               	fcall	__pidataBANK0+1	;fetch initializer
+    92  07E1  00A1               	movwf	(__pdataBANK0+1)& (0+127)
+    93  07E2  2759               	fcall	__pidataBANK0+2	;fetch initializer
+    94  07E3  00A2               	movwf	(__pdataBANK0+2)& (0+127)
+    95  07E4  275A               	fcall	__pidataBANK0+3	;fetch initializer
+    96  07E5  00A3               	movwf	(__pdataBANK0+3)& (0+127)
+    97  07E6  275B               	fcall	__pidataBANK0+4	;fetch initializer
+    98  07E7  00A4               	movwf	(__pdataBANK0+4)& (0+127)
+    99  07E8  275C               	fcall	__pidataBANK0+5	;fetch initializer
+   100  07E9  00A5               	movwf	(__pdataBANK0+5)& (0+127)
+   101  07EA  275D               	fcall	__pidataBANK0+6	;fetch initializer
+   102  07EB  00A6               	movwf	(__pdataBANK0+6)& (0+127)
+   103  07EC  275E               	fcall	__pidataBANK0+7	;fetch initializer
+   104  07ED  00A7               	movwf	(__pdataBANK0+7)& (0+127)
+   105  07EE  275F               	fcall	__pidataBANK0+8	;fetch initializer
+   106  07EF  00A8               	movwf	(__pdataBANK0+8)& (0+127)
+   107  07F0  2760               	fcall	__pidataBANK0+9	;fetch initializer
+   108  07F1  00A9               	movwf	(__pdataBANK0+9)& (0+127)
+   109  07F2  2761               	fcall	__pidataBANK0+10	;fetch initializer
+   110  07F3  00AA               	movwf	(__pdataBANK0+10)& (0+127)
+   111  07F4  2762               	fcall	__pidataBANK0+11	;fetch initializer
+   112  07F5  00AB               	movwf	(__pdataBANK0+11)& (0+127)
+   113  07F6  2763               	fcall	__pidataBANK0+12	;fetch initializer
+   114  07F7  00AC               	movwf	(__pdataBANK0+12)& (0+127)
+   115  07F8  2764               	fcall	__pidataBANK0+13	;fetch initializer
+   116  07F9  00AD               	movwf	(__pdataBANK0+13)& (0+127)
+   117  07FA  2765               	fcall	__pidataBANK0+14	;fetch initializer
+   118  07FB  00AE               	movwf	(__pdataBANK0+14)& (0+127)
+   119  07FC  2766               	fcall	__pidataBANK0+15	;fetch initializer
+   120  07FD  00AF               	movwf	(__pdataBANK0+15)& (0+127)
+   121  07FE                     end_of_initialization:	
+   122                           ;End of C runtime variable initialization code
+   123                           
+   124  07FE                     __end_of__initialization:	
+   125  07FE  0183               	clrf	3
+   126  07FF  2F67               	ljmp	_main	;jump to C main() function
+   127                           
+   128                           	psect	dataBANK0
+   129  0020                     __pdataBANK0:	
+   130  0020                     _statetri:	
+   131  0020                     	ds	8
+   132  0028                     _stateval:	
+   133  0028                     	ds	8
+   134                           
+   135                           	psect	cstackCOMMON
+   136  0070                     __pcstackCOMMON:	
+   137  0070                     ?_setState:	
+   138  0070                     ??_setState:	
+   139                           ; 0 bytes @ 0x0
+   140                           
+   141  0070                     setState@s:	
+   142                           ; 0 bytes @ 0x0
+   143                           
+   144                           
+   145                           ; 1 bytes @ 0x0
+   146  0070                     	ds	1
+   147  0071                     ?_main:	
+   148  0071                     main@argc:	
+   149                           ; 2 bytes @ 0x1
+   150                           
+   151                           
+   152                           ; 2 bytes @ 0x1
+   153  0071                     	ds	2
+   154  0073                     main@argv:	
+   155                           
+   156                           ; 2 bytes @ 0x3
+   157  0073                     	ds	2
+   158  0075                     ??_main:	
+   159                           
+   160                           ; 0 bytes @ 0x5
+   161  0075                     	ds	2
+   162  0077                     main@sleepcounter:	
+   163                           
+   164                           ; 2 bytes @ 0x7
+   165  0077                     	ds	2
+   166                           
+   167                           	psect	maintext
+   168  0767                     __pmaintext:	
+   169 ;;
+   170 ;;Main: autosize = 0, tempsize = 2, incstack = 0, save=0
+   171 ;;
+   172 ;; *************** function _main *****************
+   173 ;; Defined at:
+   174 ;;		line 45 in file "Trafficlight.c"
+   175 ;; Parameters:    Size  Location     Type
+   176 ;;  argc            2    1[COMMON] int 
+   177 ;;  argv            2    3[COMMON] PTR PTR unsigned char 
+   178 ;; Auto vars:     Size  Location     Type
+   179 ;;  sleepcounter    2    7[COMMON] int 
+   180 ;; Return value:  Size  Location     Type
+   181 ;;                  2    1[COMMON] int 
+   182 ;; Registers used:
+   183 ;;		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+   184 ;; Tracked objects:
+   185 ;;		On entry : 17F/0
+   186 ;;		On exit  : 0/0
+   187 ;;		Unchanged: 0/0
+   188 ;; Data sizes:     COMMON   BANK0   BANK1
+   189 ;;      Params:         4       0       0
+   190 ;;      Locals:         2       0       0
+   191 ;;      Temps:          2       0       0
+   192 ;;      Totals:         8       0       0
+   193 ;;Total ram usage:        8 bytes
+   194 ;; Hardware stack levels required when called:    1
+   195 ;; This function calls:
+   196 ;;		_setState
+   197 ;; This function is called by:
+   198 ;;		Startup code after reset
+   199 ;; This function uses a non-reentrant model
+   200 ;;
+   201                           
+   202                           
+   203                           ;psect for function _main
+   204  0767                     _main:	
+   205                           
+   206                           ;Trafficlight.c: 46: OSCCONbits.IRCF = 0;
+   207                           
+   208                           ;incstack = 0
+   209                           ; Regs used in _main: [wreg-fsr0h+status,2+status,0+btemp+1+pclath+cstack]
+   210  0767  308F               	movlw	-113
+   211  0768  1683               	bsf	3,5	;RP0=1, select bank1
+   212  0769  058F               	andwf	15,f	;volatile
+   213                           
+   214                           ;Trafficlight.c: 47: GPIO = 0;
+   215  076A  1283               	bcf	3,5	;RP0=0, select bank0
+   216  076B  0185               	clrf	5	;volatile
+   217                           
+   218                           ;Trafficlight.c: 48: TRISIO = 0;
+   219  076C  1683               	bsf	3,5	;RP0=1, select bank1
+   220  076D  0185               	clrf	5	;volatile
+   221                           
+   222                           ;Trafficlight.c: 49: WPU = 0;
+   223  076E  0195               	clrf	21	;volatile
+   224                           
+   225                           ;Trafficlight.c: 50: int sleepcounter = 0;
+   226  076F  01F7               	clrf	main@sleepcounter
+   227  0770  01F8               	clrf	main@sleepcounter+1
+   228  0771                     l531:	
+   229                           ;Trafficlight.c: 51: while (1 == 1) {
+   230                           
+   231                           
+   232                           ;Trafficlight.c: 52: setState(0);
+   233  0771  3000               	movlw	0
+   234  0772  2748               	fcall	_setState
+   235                           
+   236                           ;Trafficlight.c: 53: _delay((unsigned long)((10000)*(32000/4000.0)));
+   237  0773  3068               	movlw	104
+   238  0774  00F6               	movwf	??_main+1
+   239  0775  30E4               	movlw	228
+   240  0776  00F5               	movwf	??_main
+   241  0777                     u37:	
+   242  0777  0BF5               	decfsz	??_main,f
+   243  0778  2F77               	goto	u37
+   244  0779  0BF6               	decfsz	??_main+1,f
+   245  077A  2F77               	goto	u37
+   246  077B  0000               	nop
+   247                           
+   248                           ;Trafficlight.c: 54: setState(1);
+   249  077C  3001               	movlw	1
+   250  077D  2748               	fcall	_setState
+   251                           
+   252                           ;Trafficlight.c: 55: _delay((unsigned long)((1500)*(32000/4000.0)));
+   253  077E  3010               	movlw	16
+   254  077F  00F6               	movwf	??_main+1
+   255  0780  3094               	movlw	148
+   256  0781  00F5               	movwf	??_main
+   257  0782                     u47:	
+   258  0782  0BF5               	decfsz	??_main,f
+   259  0783  2F82               	goto	u47
+   260  0784  0BF6               	decfsz	??_main+1,f
+   261  0785  2F82               	goto	u47
+   262  0786  0000               	nop
+   263                           
+   264                           ;Trafficlight.c: 56: setState(2);
+   265  0787  3002               	movlw	2
+   266  0788  2748               	fcall	_setState
+   267                           
+   268                           ;Trafficlight.c: 57: _delay((unsigned long)((1500)*(32000/4000.0)));
+   269  0789  3010               	movlw	16
+   270  078A  00F6               	movwf	??_main+1
+   271  078B  3094               	movlw	148
+   272  078C  00F5               	movwf	??_main
+   273  078D                     u57:	
+   274  078D  0BF5               	decfsz	??_main,f
+   275  078E  2F8D               	goto	u57
+   276  078F  0BF6               	decfsz	??_main+1,f
+   277  0790  2F8D               	goto	u57
+   278  0791  0000               	nop
+   279                           
+   280                           ;Trafficlight.c: 58: setState(3);
+   281  0792  3003               	movlw	3
+   282  0793  2748               	fcall	_setState
+   283                           
+   284                           ;Trafficlight.c: 59: _delay((unsigned long)((1500)*(32000/4000.0)));
+   285  0794  3010               	movlw	16
+   286  0795  00F6               	movwf	??_main+1
+   287  0796  3094               	movlw	148
+   288  0797  00F5               	movwf	??_main
+   289  0798                     u67:	
+   290  0798  0BF5               	decfsz	??_main,f
+   291  0799  2F98               	goto	u67
+   292  079A  0BF6               	decfsz	??_main+1,f
+   293  079B  2F98               	goto	u67
+   294  079C  0000               	nop
+   295                           
+   296                           ;Trafficlight.c: 60: setState(4);
+   297  079D  3004               	movlw	4
+   298  079E  2748               	fcall	_setState
+   299                           
+   300                           ;Trafficlight.c: 61: _delay((unsigned long)((10000)*(32000/4000.0)));
+   301  079F  3068               	movlw	104
+   302  07A0  00F6               	movwf	??_main+1
+   303  07A1  30E4               	movlw	228
+   304  07A2  00F5               	movwf	??_main
+   305  07A3                     u77:	
+   306  07A3  0BF5               	decfsz	??_main,f
+   307  07A4  2FA3               	goto	u77
+   308  07A5  0BF6               	decfsz	??_main+1,f
+   309  07A6  2FA3               	goto	u77
+   310  07A7  0000               	nop
+   311                           
+   312                           ;Trafficlight.c: 62: setState(5);
+   313  07A8  3005               	movlw	5
+   314  07A9  2748               	fcall	_setState
+   315                           
+   316                           ;Trafficlight.c: 63: _delay((unsigned long)((1500)*(32000/4000.0)));
+   317  07AA  3010               	movlw	16
+   318  07AB  00F6               	movwf	??_main+1
+   319  07AC  3094               	movlw	148
+   320  07AD  00F5               	movwf	??_main
+   321  07AE                     u87:	
+   322  07AE  0BF5               	decfsz	??_main,f
+   323  07AF  2FAE               	goto	u87
+   324  07B0  0BF6               	decfsz	??_main+1,f
+   325  07B1  2FAE               	goto	u87
+   326  07B2  0000               	nop
+   327                           
+   328                           ;Trafficlight.c: 64: setState(6);
+   329  07B3  3006               	movlw	6
+   330  07B4  2748               	fcall	_setState
+   331                           
+   332                           ;Trafficlight.c: 65: _delay((unsigned long)((1500)*(32000/4000.0)));
+   333  07B5  3010               	movlw	16
+   334  07B6  00F6               	movwf	??_main+1
+   335  07B7  3094               	movlw	148
+   336  07B8  00F5               	movwf	??_main
+   337  07B9                     u97:	
+   338  07B9  0BF5               	decfsz	??_main,f
+   339  07BA  2FB9               	goto	u97
+   340  07BB  0BF6               	decfsz	??_main+1,f
+   341  07BC  2FB9               	goto	u97
+   342  07BD  0000               	nop
+   343                           
+   344                           ;Trafficlight.c: 66: setState(7);
+   345  07BE  3007               	movlw	7
+   346  07BF  2748               	fcall	_setState
+   347                           
+   348                           ;Trafficlight.c: 67: _delay((unsigned long)((1500)*(32000/4000.0)));
+   349  07C0  3010               	movlw	16
+   350  07C1  00F6               	movwf	??_main+1
+   351  07C2  3094               	movlw	148
+   352  07C3  00F5               	movwf	??_main
+   353  07C4                     u107:	
+   354  07C4  0BF5               	decfsz	??_main,f
+   355  07C5  2FC4               	goto	u107
+   356  07C6  0BF6               	decfsz	??_main+1,f
+   357  07C7  2FC4               	goto	u107
+   358  07C8  0000               	nop
+   359                           
+   360                           ;Trafficlight.c: 68: if (++sleepcounter >= 30) {
+   361  07C9  3001               	movlw	1
+   362  07CA  07F7               	addwf	main@sleepcounter,f
+   363  07CB  1803               	skipnc
+   364  07CC  0AF8               	incf	main@sleepcounter+1,f
+   365  07CD  3000               	movlw	0
+   366  07CE  07F8               	addwf	main@sleepcounter+1,f
+   367  07CF  0878               	movf	main@sleepcounter+1,w
+   368  07D0  3A80               	xorlw	128
+   369  07D1  00FF               	movwf	127
+   370  07D2  3080               	movlw	128
+   371  07D3  027F               	subwf	127,w
+   372  07D4  1D03               	skipz
+   373  07D5  2FD8               	goto	u25
+   374  07D6  301E               	movlw	30
+   375  07D7  0277               	subwf	main@sleepcounter,w
+   376  07D8                     u25:	
+   377  07D8  1C03               	skipc
+   378  07D9  2F71               	goto	l531
+   379                           
+   380                           ;Trafficlight.c: 69: GPIO=0;
+   381  07DA  1283               	bcf	3,5	;RP0=0, select bank0
+   382  07DB  0185               	clrf	5	;volatile
+   383  07DC  0063               	sleep	;# 
+   384  07DD  2F71               	goto	l531
+   385  07DE                     __end_of_main:	
+   386                           ;Trafficlight.c: 71: }
+   387                           ;Trafficlight.c: 72: }
+   388                           ;Trafficlight.c: 73: return (0);
+   389                           ;	Return value of _main is never used
+   390                           
+   391                           
+   392                           	psect	text1
+   393  0748                     __ptext1:	
+   394 ;; *************** function _setState *****************
+   395 ;; Defined at:
+   396 ;;		line 37 in file "Trafficlight.c"
+   397 ;; Parameters:    Size  Location     Type
+   398 ;;  s               1    wreg     unsigned char 
+   399 ;; Auto vars:     Size  Location     Type
+   400 ;;  s               1    0[COMMON] unsigned char 
+   401 ;; Return value:  Size  Location     Type
+   402 ;;		None               void
+   403 ;; Registers used:
+   404 ;;		wreg, fsr0l, fsr0h, status,2, status,0
+   405 ;; Tracked objects:
+   406 ;;		On entry : 0/0
+   407 ;;		On exit  : 0/0
+   408 ;;		Unchanged: 0/0
+   409 ;; Data sizes:     COMMON   BANK0   BANK1
+   410 ;;      Params:         0       0       0
+   411 ;;      Locals:         1       0       0
+   412 ;;      Temps:          0       0       0
+   413 ;;      Totals:         1       0       0
+   414 ;;Total ram usage:        1 bytes
+   415 ;; Hardware stack levels used:    1
+   416 ;; This function calls:
+   417 ;;		Nothing
+   418 ;; This function is called by:
+   419 ;;		_main
+   420 ;; This function uses a non-reentrant model
+   421 ;;
+   422                           
+   423                           
+   424                           ;psect for function _setState
+   425  0748                     _setState:	
+   426                           
+   427                           ;incstack = 0
+   428                           ; Regs used in _setState: [wreg-fsr0h+status,2+status,0]
+   429                           ;setState@s stored from wreg
+   430  0748  00F0               	movwf	setState@s
+   431                           
+   432                           ;Trafficlight.c: 38: TRISIO = statetri[s];
+   433  0749  0870               	movf	setState@s,w
+   434  074A  3E20               	addlw	_statetri& (0+255)
+   435  074B  0084               	movwf	4
+   436  074C  1383               	bcf	3,7	;select IRP bank0
+   437  074D  0800               	movf	0,w
+   438  074E  1683               	bsf	3,5	;RP0=1, select bank1
+   439  074F  0085               	movwf	5	;volatile
+   440                           
+   441                           ;Trafficlight.c: 39: GPIO = stateval[s];
+   442  0750  0870               	movf	setState@s,w
+   443  0751  3E28               	addlw	_stateval& (0+255)
+   444  0752  0084               	movwf	4
+   445  0753  0800               	movf	0,w
+   446  0754  1283               	bcf	3,5	;RP0=0, select bank0
+   447  0755  0085               	movwf	5	;volatile
+   448  0756  0008               	return
+   449  0757                     __end_of_setState:	
+   450  007E                     btemp	set	126	;btemp
+   451  007E                     wtemp	set	126
+   452  007E                     wtemp0	set	126
+   453  0080                     wtemp1	set	128
+   454  0082                     wtemp2	set	130
+   455  0084                     wtemp3	set	132
+   456  0086                     wtemp4	set	134
+   457  0088                     wtemp5	set	136
+   458  007F                     wtemp6	set	127
+   459  007E                     ttemp	set	126
+   460  007E                     ttemp0	set	126
+   461  0081                     ttemp1	set	129
+   462  0084                     ttemp2	set	132
+   463  0087                     ttemp3	set	135
+   464  007F                     ttemp4	set	127
+   465  007E                     ltemp	set	126
+   466  007E                     ltemp0	set	126
+   467  0082                     ltemp1	set	130
+   468  0086                     ltemp2	set	134
+   469  0080                     ltemp3	set	128
+
+
+Data Sizes:
+    Strings     0
+    Constant    0
+    Data        16
+    BSS         0
+    Persistent  0
+    Stack       0
+
+Auto Spaces:
+    Space          Size  Autos    Used
+    COMMON           14      9       9
+    BANK0            80      0      16
+    BANK1            32      0       0
+
+Pointer List with Targets:
+
+    None.
+
+Critical Paths under _main in COMMON
+
+    _main->_setState
+
+Critical Paths under _main in BANK0
+
+    None.
+
+Critical Paths under _main in BANK1
+
+    None.
+
+Call Graph Tables:
+
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (0) _main                                                 8     4      4      67
+                                              1 COMMON     8     4      4
+                           _setState
+ ---------------------------------------------------------------------------------
+ (1) _setState                                             1     1      0      44
+                                              0 COMMON     1     1      0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 1
+ ---------------------------------------------------------------------------------
+
+ Call Graph Graphs:
+
+ _main (ROOT)
+   _setState
+
+ Address spaces:
+Name               Size   Autos  Total    Cost      Usage
+BANK1               20      0       0       5        0.0%
+BITBANK1            20      0       0       7        0.0%
+SFR1                 0      0       0       2        0.0%
+BITSFR1              0      0       0       2        0.0%
+BANK0               50      0      10       4       20.0%
+BITBANK0            50      0       0       3        0.0%
+SFR0                 0      0       0       1        0.0%
+BITSFR0              0      0       0       1        0.0%
+COMMON               E      9       9       1       64.3%
+BITCOMMON            E      0       0       0        0.0%
+CODE                 0      0       0       0        0.0%
+DATA                 0      0      19       8        0.0%
+ABS                  0      0      19       6        0.0%
+NULL                 0      0       0       0        0.0%
+STACK                0      0       0       2        0.0%
+EEDATA             100      0       0       0        0.0%
+
+
+Microchip Technology PIC Macro Assembler V1.33 build 59893 
+Symbol Table                                                                                   Sat Nov 29 11:07:23 2014
+
+            __CFG_CP$OFF 0000                       u25 07D8                       u37 0777  
+                     u47 0782                       u57 078D                       u67 0798  
+                     u77 07A3                       u87 07AE                       u97 07B9  
+                    l531 0771                      u107 07C4             __CFG_CPD$OFF 0000  
+                    _WPU 0095                      fsr0 0004                      indf 0000  
+                   _GPIO 0005                     _main 0767                     btemp 007E  
+                   ltemp 007E                     start 0000                     ttemp 007E  
+                   wtemp 007E            __CFG_IESO$OFF 0000            __CFG_MCLRE$ON 0000  
+                  ?_main 0071            __CFG_WDTE$OFF 0000           __CFG_FCMEN$OFF 0000  
+         __CFG_BOREN$OFF 0000                    ltemp0 007E                    ltemp1 0082  
+                  ltemp2 0086                    ltemp3 0080                    ttemp0 007E  
+                  ttemp1 0081                    ttemp2 0084                    ttemp3 0087  
+                  ttemp4 007F                    status 0003                    wtemp0 007E  
+                  wtemp1 0080                    wtemp2 0082                    wtemp3 0084  
+                  wtemp4 0086                    wtemp5 0088                    wtemp6 007F  
+        __initialization 07DE             __end_of_main 07DE                   ??_main 0075  
+                 _TRISIO 0085           __CFG_PWRTE$OFF 0000         __end_of_setState 0757  
+__end_of__initialization 07FE           __pcstackCOMMON 0070             __pidataBANK0 0757  
+             __pmaintext 0767                ?_setState 0070                  __ptext1 0748  
+   end_of_initialization 07FE               ??_setState 0070      start_initialization 07DE  
+            __pdataBANK0 0020                ___latbits 0000        __size_of_setState 000F  
+       main@sleepcounter 0077                setState@s 0070            __size_of_main 0077  
+               _setState 0748                 _stateval 0028                 _statetri 0020  
+               main@argc 0071                 main@argv 0073               _OSCCONbits 008F  
+     __CFG_FOSC$INTOSCIO 0000  

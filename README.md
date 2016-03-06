@@ -1,1 +1,8 @@
-Toy trafficlight. Schematics is on a piece of paper somewhere... :) I'll redraw, when I find it.
+Toy trafficlight. 
+
+Schematics is in the Electronics folder in KiCAD format and PDF. 
+
+For more info, see http://jesper.krogpoulsen.dk/search/label/traffliclight
+
+
+
